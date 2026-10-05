@@ -1,0 +1,51 @@
+{
+  "name": "yu-mysql",
+  "version": "0.1.0",
+  "description": "屿·mysql — MySQL 可视化桌面工具（中文版）",
+  "author": "屿宸网络科技工作室",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ms-liyc/MySQL-Chinese.git"
+  },
+  "homepage": "https://github.com/Ms-liyc/MySQL-Chinese",
+  "main": "out/main/index.js",
+  "config": {
+    "electron_mirror": "https://npmmirror.com/mirrors/electron/",
+    "electron_custom_dir": "v{{ version }}",
+    "electron_builder_binaries_mirror": "https://npmmirror.com/mirrors/electron-builder-binaries/"
+  },
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "preview": "electron-vite preview",
+    "typecheck": "tsc --noEmit",
+    "postinstall": "node scripts/fix-rollup-native.mjs && node scripts/reinstall-electron.mjs",
+    "fix:deps": "node scripts/fix-rollup-native.mjs && node scripts/reinstall-electron.mjs",
+    "reinstall:electron": "node scripts/reinstall-electron.mjs",
+    "bump:version": "node scripts/bump-version.mjs"
+  },
+  "dependencies": {
+    "@monaco-editor/react": "^4.7.0",
+    "@xyflow/react": "^12.6.0",
+    "echarts": "^5.6.0",
+    "echarts-for-react": "^3.0.2",
+    "lucide-react": "^0.487.0",
+    "mysql2": "^3.14.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@vitejs/plugin-react": "^4.4.1",
+    "electron": "^35.1.5",
+    "electron-vite": "^3.1.0",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.2"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-win32-ia32-msvc": "4.64.0",
+    "@rollup/rollup-win32-x64-msvc": "4.64.0"
+  }
+}

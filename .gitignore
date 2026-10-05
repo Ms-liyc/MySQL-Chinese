@@ -1,0 +1,10 @@
+node_modules
+dist
+out
+dist-electron
+*.log
+.DS_Store
+_node_modules_trash
+_rollup_tmp
+.npm
+.nm
