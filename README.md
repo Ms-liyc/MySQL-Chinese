@@ -14,7 +14,7 @@
 [![MySQL](https://img.shields.io/badge/MySQL-8.x-4479A1?style=flat-square&logo=mysql&logoColor=white)](https://www.mysql.com/)
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey?style=flat-square)](https://github.com/Ms-liyc/MySQL-Chinese)
 
-[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](./LICENSE)
+[![License](https://img.shields.io/badge/License-MIT%20%2B%20附加条款-green?style=flat-square)](./LICENSE)
 
 [![Star](https://img.shields.io/github/stars/Ms-liyc/MySQL-Chinese?style=social)](https://github.com/Ms-liyc/MySQL-Chinese)
 
@@ -95,12 +95,16 @@ npm run reinstall:electron
 
 ## ❓ 常见问题
 
-### `@rollup/rollup-win32-xxx-msvc` 找不到
+### `@rollup/rollup-win32-xxx-msvc` 或 `@esbuild/win32-xxx` 找不到
+
+通常是 Node 32 位与 64 位混用导致。请依次尝试：
 
 ```bash
 npm run fix:deps
 npm run dev
 ```
+
+**推荐**：安装 [64 位 Node.js](https://nodejs.org)，卸载 `Program Files (x86)\nodejs` 避免 PATH 冲突。
 
 ### Electron 下载失败
 
@@ -129,7 +133,9 @@ MySQL 连接与 SQL 执行在主进程完成，渲染进程通过 IPC 调用，�
 
 ## 📄 开源协议
 
-本项目采用 [MIT License](./LICENSE) 开源。
+本项目基于 [MIT License](./LICENSE) 开源，并附加以下条款：
+
+> **二次修改后售卖**：若对本项目进行修改并用于商业售卖或分发，须保留原版权声明、标注衍生来源（屿·mysql / [MySQL-Chinese](https://github.com/Ms-liyc/MySQL-Chinese)），并向客户/用户提供修改后的完整源代码，或在发布时将修改源码及说明发送给原作者。
 
 ## 👥 开发团队
 

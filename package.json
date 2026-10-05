@@ -1,9 +1,9 @@
 {
   "name": "yu-mysql",
-  "version": "0.1.0",
+  "version": "0.1.1271",
   "description": "屿·mysql — MySQL 可视化桌面工具（中文版）",
   "author": "屿宸网络科技工作室",
-  "license": "MIT",
+  "license": "SEE LICENSE IN LICENSE",
   "repository": {
     "type": "git",
     "url": "https://github.com/Ms-liyc/MySQL-Chinese.git"
@@ -20,8 +20,8 @@
     "build": "electron-vite build",
     "preview": "electron-vite preview",
     "typecheck": "tsc --noEmit",
-    "postinstall": "node scripts/fix-rollup-native.mjs && node scripts/reinstall-electron.mjs",
-    "fix:deps": "node scripts/fix-rollup-native.mjs && node scripts/reinstall-electron.mjs",
+    "postinstall": "node scripts/fix-native-deps.mjs && node scripts/reinstall-electron.mjs",
+    "fix:deps": "node scripts/fix-native-deps.mjs && node scripts/reinstall-electron.mjs",
     "reinstall:electron": "node scripts/reinstall-electron.mjs",
     "bump:version": "node scripts/bump-version.mjs"
   },
